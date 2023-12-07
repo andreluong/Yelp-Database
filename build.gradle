@@ -10,6 +10,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'commons-dbutils:commons-dbutils:1.8.1'
     implementation 'org.apache.commons:commons-lang3:3.13.0'
     implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.2.jre8'
     compileOnly 'org.projectlombok:lombok:1.18.30'

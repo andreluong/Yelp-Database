@@ -1,6 +1,7 @@
 package org.yelp.andre.controller;
 
 
+import org.apache.commons.dbutils.DbUtils;
 import org.yelp.andre.model.User;
 
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import static org.yelp.andre.utility.SqlServerConnection.getConnection;
 import static org.yelp.andre.utility.TableUtils.getIntInput;
 
 public class YelpDatabaseController {
+    private final Connection connection;
     private final Scanner scanner;
 
     private final UserController userController;
@@ -21,7 +23,7 @@ public class YelpDatabaseController {
     private final User user;
 
     public YelpDatabaseController() {
-        final Connection connection = getConnection(System.getenv("DB_SERVER"), System.getenv("DB_USERNAME"), System.getenv("DB_PASSWORD"));
+        this.connection = getConnection(System.getenv("DB_SERVER"), System.getenv("DB_USERNAME"), System.getenv("DB_PASSWORD"));
         this.scanner = new Scanner(System.in).useDelimiter("\\R");
         this.userController = new UserController(connection, scanner);
         this.businessController = new BusinessController(connection, scanner);
@@ -39,6 +41,7 @@ public class YelpDatabaseController {
     }
 
     private void quit() {
+        DbUtils.closeQuietly(connection);
         System.out.println("\nExiting program...");
     }
 
