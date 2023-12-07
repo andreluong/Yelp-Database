@@ -3,8 +3,7 @@ A CLI Yelp database manager. Features include searching businesses and users, ad
 
 ## Setup
 1. `Gradle build`
-2. Install the [EnvFile plugin](https://plugins.jetbrains.com/plugin/7861-envfile)
-3. Define environment variables in `Run/Debug configurations`
+2. Define the environment variables in `Run/Debug configurations`
    - Database server - `DB_SERVER`
    - Username - `DB_USERNAME`
    - Password for user - `DB_PASSWORD`
