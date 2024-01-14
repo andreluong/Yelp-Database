@@ -16,7 +16,7 @@ public class SqlServerConnection {
             System.out.println("Successfully connected to SQL Server.");
             return con;
         } catch (SQLException e) {
-            System.err.println ( "\n\nFailed to connect to CSIL SQL Server; exit now.\n\n" );
+            System.err.println ( "\n\nFailed to connect to SQL Server; exit now.\n\n" );
             e.printStackTrace(System.err);
             System.err.println("SQL State: " + e.getSQLState());
             System.err.println("Error Code: " + e.getErrorCode());

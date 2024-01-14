@@ -1,5 +1,6 @@
 package org.yelp.andre.controller;
 
+import lombok.NonNull;
 import org.yelp.andre.model.SearchableTable;
 import org.yelp.andre.model.User;
 
@@ -19,6 +20,7 @@ public class UserController extends SearchableTable {
     }
 
     @Override
+    @NonNull
     public String getResultSetInfo(ResultSet rs) throws SQLException {
         return rs.getString("user_id") + ", " + rs.getString("name") + ", " +
                 rs.getInt("review_count") + ", " + rs.getInt("useful") + ", " +

@@ -1,5 +1,6 @@
 package org.yelp.andre.controller;
 
+import lombok.NonNull;
 import org.yelp.andre.model.SearchableTable;
 import org.yelp.andre.model.Business;
 
@@ -22,6 +23,7 @@ public class BusinessController extends SearchableTable {
     }
 
     @Override
+    @NonNull
     public String getResultSetInfo(ResultSet rs) throws SQLException {
         return rs.getString("business_id") + ", " + rs.getString("name") + ", " +
                 rs.getString("address") + ", " + rs.getString("city") + ", " +

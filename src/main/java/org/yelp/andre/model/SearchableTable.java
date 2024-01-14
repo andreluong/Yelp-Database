@@ -2,6 +2,7 @@ package org.yelp.andre.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NonNull;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,6 +22,7 @@ public abstract class SearchableTable {
     private Connection connection;
     private Scanner scanner;
 
+    @NonNull
     public abstract String getResultSetInfo(ResultSet rs) throws SQLException;
 
     public abstract String getSearchOrdering();

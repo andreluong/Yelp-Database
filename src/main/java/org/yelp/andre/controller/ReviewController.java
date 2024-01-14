@@ -1,5 +1,6 @@
 package org.yelp.andre.controller;
 
+import lombok.NonNull;
 import org.yelp.andre.model.SearchableTable;
 import org.yelp.andre.model.Business;
 import org.yelp.andre.model.User;
@@ -70,6 +71,7 @@ public class ReviewController extends SearchableTable {
     }
 
     @Override
+    @NonNull
     public String getResultSetInfo(ResultSet rs) {
         throw new UnsupportedOperationException(UNIMPLEMENTED_METHOD_ERROR_MSG + "public String getResultSetInfo(ResultSet rs)");
     }
