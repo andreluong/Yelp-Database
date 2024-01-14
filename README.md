@@ -6,7 +6,7 @@ A CLI Yelp database manager. Features include searching businesses and users, ad
 ## Setup
 1. Refer to `resources/database/setup.sql` for my database setup. Then `BULK INSERT` the data from the CSV files into the tables.
 2. `Gradle build`
-3. Define the environment variables in `Run/Debug configurations`
+3. Define the environment variables in `Run/Debug configurations` for `Application/Main` (You may have to run the application first to get the option)
    - Database server - `DB_SERVER`
    - Username - `DB_USERNAME`
    - Password for user - `DB_PASSWORD`
